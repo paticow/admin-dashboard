@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <body>
     <div id="header">
         <div id="searchbar">
@@ -29,23 +29,23 @@
         </div>
     </div>
     <div id="sidebar">
-        <div id="logo">Dashboard</div>
-        <div id="dash-1">
-            <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Messages</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
-            </ul>
+        <div id="logo">
+            <span class="icon"></span>
+            <h2 id="dashboard">Dashboard</h2>
         </div>
+        <div id="dash-1">
+                <a id="home"><span class="icon"></span>Home</a>
+                <a id="profile"><span class="icon"></span>Profile</a>
+                <a id="messages"><span class="icon"></span>Messages</a>
+                <a id="history"><span class="icon"></span>History</a>
+                <a id="tasks"><span class="icon"></span>Tasks</a>
+                <a id="communities"><span class="icon"></span>Communities</a>
+        </div>
+        <br>
         <div id="dash-2">
-            <ul>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
-            </ul>
+            <a id="settings"><span class="icon"></span>Settings</a>
+            <a id="support"><span class="icon"></span>Support</a>
+            <a id="privacy"><span class="icon"></span>Privacy</a>
         </div>
     </div>
     <div id="main">
@@ -128,7 +128,7 @@
                         <h4>@username</h4>
                         <p>description text</p>
                     </span>
-                </div>
+            </div>
             </div>
         </div>
     </div>

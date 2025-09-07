@@ -47,6 +47,7 @@ body{
 }
 
 /*HEADER START*/
+/*TOP PART START*/
 #header{
     grid-column: 2/5;
     grid-row: 1/2;
@@ -54,6 +55,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 80px);
+    box-shadow: 0px 0px 10px 0px var(--main);
 }
 
 #header-name{
@@ -86,6 +88,11 @@ body{
     grid-template-columns: repeat(11, 1fr);
 }
 
+#search-icon .icon{
+    grid-column: 1/2;
+    background-image: url("images/magnify.png");
+}
+
 #search-right{
     grid-column: 9/11;
     display: flex;
@@ -102,16 +109,12 @@ body{
     width: 50px;
     height: 50px;
 }
-
+/*TOP PART END*/
+/*BOTTOM PART START*/
 #header-data > #pfp .icon{
     grid-column: 1/2;
     width: 70px;
     height: 70px;
-}
-
-#search-icon .icon{
-    grid-column: 1/2;
-    background-image: url("images/magnify.png");
 }
 
 #greeting{
@@ -153,9 +156,10 @@ button{
     background-color: var(--bttn);
     color: var(--bttn-text);
 }
+/*BOTTOM PART END*/
 /*HEADER END*/
-/*SIDEBAR START*/
 
+/*SIDEBAR START*/
 #sidebar{
     grid-column: 1/2;
     grid-row: 1/3;
@@ -200,37 +204,52 @@ a{
 
 /*SIDEBAR END*/
 
+/*MAIN SIDE START*/
 #main{
     grid-column: 2/5;
     display: flex;
     margin-top: 10px;
-/*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 300px 100px 300px;
-*/
 }
+
+/*PROJECT SIDE START*/
+#project-container{
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+} 
+
+#projects{
+    background-color: greenyellow;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 250px); 
+    align-items: center;
+}
+
+#projects > .card{
+    border: solid 2px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.text-icons{
+    display: flex;
+    justify-content: end;
+}
+
+.text-icons > a{
+    padding: 0;
+    margin: 0;
+}
+/*PROJECT SIDE END*/
+
 
 
 #right-side{
     background-color: orange;
     width: 40%;
 }
-
-#project-container{
-    background-color: darkcyan;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-
-#projects{
-    background-color: greenyellow;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 250px);
-}
-
 
 #announcements-content{
     background-color: pink;
@@ -286,81 +305,14 @@ a{
     background-image: url("images/lock.png");
 }
 
-
-
-/*
-#searchbar{
-    display: flex;
-    background-color: yellow;
-    padding-top: 30px;
-    align-items: center;
-    justify-content: space-evenly;
-/*
-    display: grid;
-    grid-template-columns: 200px 1fr 200px 200px 200px;
-    grid-template-rows: 50px;
-    background-color: yellow;
-    padding-top: 20px;
-    place-items: center;
-
+#star .icon{
+    background-image: url("images/star-plus.png");
 }
 
-#search-icon .icon{
-    /*grid-column: 1/2;
-    background-image: url("images/magnify.png");
+#eye .icon{
+    background-image: url("images/eye-plus.png");
 }
 
-#search{
-    /*grid-column: 2/3;
-    border-radius: 16px;
-    border-style: none;
-    width: 60%;
-    height: 40px;
-    margin: 0;
-    background-color: var(--main);
+#link .icon{
+    background-image: url("images/link.png");
 }
-
-#search-right{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#notif .icon{
-    background-image: url("images/bell-ring.png");
-}
-
-#pfp .icon{
-    background-image: url("images/miffy-circular-icon.png");
-    width: 50px;
-    height: 50px;
-}
-
-#header-name{
-    font-weight: 600;
-    font-size: 30px;
-    margin: 0;
-}
-
-#header-data{
-    display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
-    justify-items: center;
-    background-color: aqua;
-}
-
-#header-data > #pfp .icon{
-    grid-column: 1/2;
-    width: 70px;
-    height: 70px;
-}
-
-#greeting{
-    grid-column: 2/3;
-    line-height: 0.2;
-}
-
-#bttn-container{
-    grid-column: 4/5;
-}
-*/

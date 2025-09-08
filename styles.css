@@ -5,9 +5,10 @@
     --bttn-text: #f7f2e0;
     --container-border: #dd716b;
     --header: #f9fbfd; /*#f7f2e0*/
-    --main: #c6d1db; /*ffe8d6*/
-
-
+    --main: #ffe8d6; /*# ffe1e6 cf7486*/
+    --searchbar: #d5e6ab;
+    --card-border: #b83556;
+    --header-border: #e7b9c6;
 }
 
 @font-face {
@@ -43,7 +44,7 @@ body{
     grid-template-columns: 1fr repeat(3, 2fr); /*300px*/
     grid-template-rows: 160px 1fr;
     font-family: "Questrial", sans-serif;
-    background-color: var(--header);
+    background-color: var(--main);
 }
 
 /*HEADER START*/
@@ -55,11 +56,11 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 80px);
-    box-shadow: 0px 0px 10px 0px var(--main);
+    box-shadow: 2px 4px 5px var(--header-border);
 }
 
 #header-name{
-    font-family: "creato-display-dark";
+    font-family: "creato-display-dark", sans-serif;
     font-size: 20px;
 }
 
@@ -71,6 +72,19 @@ body{
     align-items: center;
 }
 
+input[type=text]{
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  outline: none;
+  font: 1em "creato-display";
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+input[type=text]:focus{
+    box-shadow: 2px 2px 2px var(--bttn);
+}
+
 #search{
     grid-column: 2/8;
     border-radius: 16px;
@@ -78,7 +92,7 @@ body{
     width: 100%;
     height: 40px;
     margin: 0;
-    background-color: var(--main);
+    background-color: var(--searchbar);
 }
 
 #header-data{
@@ -88,26 +102,12 @@ body{
     grid-template-columns: repeat(11, 1fr);
 }
 
-#search-icon .icon{
-    grid-column: 1/2;
-    background-image: url("images/magnify.png");
-}
 
 #search-right{
     grid-column: 9/11;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#notif .icon{
-    background-image: url("images/bell-ring.png");
-}
-
-#pfp .icon{
-    background-image: url("images/miffy-circular-icon.png");
-    width: 50px;
-    height: 50px;
 }
 /*TOP PART END*/
 /*BOTTOM PART START*/
@@ -208,34 +208,51 @@ a{
 #main{
     grid-column: 2/5;
     display: flex;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 10px;
 }
 
 /*PROJECT SIDE START*/
 #project-container{
-    background-color: darkcyan;
     display: flex;
     flex-direction: column;
     width: 60%;
 } 
 
 #projects{
-    background-color: greenyellow;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 250px); 
-    align-items: center;
+    grid-template-rows: repeat(3, 220px); 
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    gap: 20px;
 }
 
 #projects > .card{
-    border: solid 2px;
-    padding: 10px;
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--header);
+    border-left: solid 10px var(--card-border);
+    border-radius: 10px;
+
+}
+.card-text{
+    margin: 12px;
+}
+
+#your-projects{
+    margin: 10px 0px 0px 0px;
+    font-family: "creato-display-dark", sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .text-icons{
     display: flex;
     justify-content: end;
+    margin-bottom: 8px;
 }
 
 .text-icons > a{
@@ -243,18 +260,27 @@ a{
     margin: 0;
 }
 /*PROJECT SIDE END*/
-
-
-
+/*OTHER SIDE START*/
 #right-side{
-    background-color: orange;
     width: 40%;
 }
 
-#announcements-content{
+#right-side > .card{
+
+}
+
+#announ-text{
+    margin: 10px 0px 0px 0px;
+    font-family: "creato-display-dark", sans-serif;
+    font-size: 20px;
+}
+
+#announ-content{
     background-color: pink;
     display: grid;
     grid-template-rows: repeat(3, 140px);
+    display: flex;
+    flex-direction: column;
 }
 
 #trending-content{
@@ -263,10 +289,28 @@ a{
 }
 
 
+
+/*ICONS*/
+
 #logo .icon{
     width: 42px;
     height: 40px;
     background-image: url("images/application.png");
+}
+
+#search-icon .icon{
+    grid-column: 1/2;
+    background-image: url("images/magnify.png");
+}
+
+#notif .icon{
+    background-image: url("images/bell-ring.png");
+}
+
+#pfp .icon{
+    background-image: url("images/miffy-circular-icon.png");
+    width: 50px;
+    height: 50px;
 }
 
 #home .icon{
@@ -304,15 +348,4 @@ a{
 #privacy .icon{
     background-image: url("images/lock.png");
 }
-
-#star .icon{
-    background-image: url("images/star-plus.png");
-}
-
-#eye .icon{
-    background-image: url("images/eye-plus.png");
-}
-
-#link .icon{
-    background-image: url("images/link.png");
-}
+/*ICONS*/

@@ -270,7 +270,7 @@ a{
     border-bottom: solid 1px #231123;
 }
 
-#announ-text{
+#announ-text, #trending-text{
     margin: 10px 0px 12px 0px;
     font-family: "creato-display-dark", sans-serif;
     font-size: 20px;

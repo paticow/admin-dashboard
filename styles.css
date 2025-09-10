@@ -1,11 +1,11 @@
 :root{
     --sidebar: #cd4662;
     --sidebar-text: #231123;
-    --bttn: #aec289; /*d6dc82 */
+    --bttn: #aec289; 
     --bttn-text: #f7f2e0;
     --container-border: #dd716b;
-    --header: #f9fbfd; /*#f7f2e0*/
-    --main: #ffe8d6; /*# ffe1e6 cf7486*/
+    --header: #f9fbfd; 
+    --main: #ffe1e6; 
     --searchbar: #d5e6ab;
     --card-border: #b83556;
     --header-border: #e7b9c6;
@@ -216,7 +216,7 @@ a{
 #project-container{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
 } 
 
 #projects{
@@ -262,25 +262,28 @@ a{
 /*PROJECT SIDE END*/
 /*OTHER SIDE START*/
 #right-side{
-    width: 40%;
+    width: 35%;
+    margin-left: 20px;
+    margin-right: 40px;
 }
 
-#right-side > .card{
-
+#announ-content > .card{
+    border-bottom: solid 2px #231123;
 }
 
 #announ-text{
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 12px 0px;
     font-family: "creato-display-dark", sans-serif;
     font-size: 20px;
 }
 
 #announ-content{
-    background-color: pink;
-    display: grid;
-    grid-template-rows: repeat(3, 140px);
+    background-color: var(--header);
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 14px;
 }
 
 #trending-content{
@@ -288,7 +291,15 @@ a{
     grid-template-rows: 50px repeat(3, 100px);
 }
 
+.title{
+    font-family: "creato-display-dark", sans-serif;
+    font-size: 15px;
+    line-height: 0.2;
+}
 
+.users{
+    display: flex;
+}
 
 /*ICONS*/
 
@@ -308,7 +319,7 @@ a{
 }
 
 #pfp .icon{
-    background-image: url("images/miffy-circular-icon.png");
+    background-image: url("images/profile-pictures/miffy.png");
     width: 50px;
     height: 50px;
 }
@@ -347,5 +358,39 @@ a{
 
 #privacy .icon{
     background-image: url("images/lock.png");
+}
+
+#pfp1 .icon{
+    background-image: url("images/profile-pictures/kirby.png");
+}
+
+#pfp2 .icon{
+    background-image: url("images/profile-pictures/pool-ball.png");
+}
+
+#pfp3 .icon{
+    background-image: url("images/profile-pictures/hibiscus.png");
+}
+
+#pfp4 .icon{
+    background-image: url("images/profile-pictures/fish-bowl.png");
+}
+
+#eye .icon{
+    background-image: url("images/eye-plus.png");
+}
+
+#star .icon{
+    background-image: url("images/star-plus.png");
+}
+
+#link .icon{
+    background-image: url("images/link.png");
+}
+
+.pfps{
+    width: 40px;
+    height: 40px;
+    margin: 0;
 }
 /*ICONS*/

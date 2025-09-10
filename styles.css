@@ -41,7 +41,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr); /*300px*/
-    grid-template-rows: 160px 1fr;
+    grid-template-rows: 165px 1fr;
     font-family: "Questrial", sans-serif;
     background-color: var(--main);
 }
